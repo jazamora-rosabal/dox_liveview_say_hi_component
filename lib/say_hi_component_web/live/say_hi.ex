@@ -21,7 +21,7 @@ defmodule SayHiComponentWeb.SayHi do
 
   @impl true
   def handle_event("say_hi", _, socket) do
-    a = Enum.random(~w(Julio Meli Aniel Marilis)))
+    a = Enum.random(~w(Julio Meli Aniel Marilis))
     Logger.debug("Evento disparado para saludar a #{a}")
     {:noreply,
      socket
