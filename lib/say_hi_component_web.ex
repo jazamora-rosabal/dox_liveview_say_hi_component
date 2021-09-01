@@ -16,6 +16,7 @@ defmodule SayHiComponentWeb do
   below. Instead, define any helper function in modules
   and import those modules here.
   """
+
   def live_component do
     quote do
       use Phoenix.LiveComponent
@@ -24,6 +25,19 @@ defmodule SayHiComponentWeb do
     end
   end
 
+
+  defp view_helpers do
+    quote do
+      # Use all HTML functionality (forms, tags, etc)
+      use Phoenix.HTML
+
+      # Import LiveView helpers (live_render, live_component, live_patch, etc)
+      import Phoenix.LiveView.Helpers
+
+      # Import basic rendering functionality (render, render_layout, etc)
+      import Phoenix.View
+    end
+  end
 
   @doc """
   When used, dispatch to the appropriate controller/view/etc.
