@@ -25,6 +25,6 @@ defmodule SayHiComponentWeb.SayHi do
     Logger.debug("Evento disparado para saludar a #{a}")
     {:noreply,
      socket
-     |> assign(:name, a}
+     |> assign(:name, a)}
   end
 end
