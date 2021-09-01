@@ -23,6 +23,7 @@ defmodule SayHiComponentWeb.SayHi do
   def handle_event("say_hi", _, socket) do
     a = Enum.random(~w(Julio Meli Aniel Marilis))
     Logger.debug("Evento disparado para saludar a #{a}")
+    send(self(), {__MODULE__, :change_name, a})
     {:noreply,
      socket
      |> assign(:name, a)}

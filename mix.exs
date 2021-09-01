@@ -25,7 +25,7 @@ defmodule SayHiComponent.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix_live_view, "~> 0.15.0"},
+      {:phoenix_live_view, "~> 0.11.0 or ~> 0.12.0 or ~> 0.13.0 or ~> 0.14.0 or ~> 0.15.0"},
       {:phoenix_html, "~> 2.11"}
     ]
   end
